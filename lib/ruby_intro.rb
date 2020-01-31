@@ -111,20 +111,17 @@ end
 class BookInStock
 # YOUR CODE HERE
 	def initialize(isbn,price)
-		if isbn=='' 
-			raise(ArgumentError)
-		end
-		if price<=0
+		if isbn=='' or price<=0 
 			raise(ArgumentError)
 		end
 		@isbn=isbn
 		@price=price
 	end
 	def isbn
-		@isbn
+		return @isbn
 	end
 	def price
-		@price
+		return @price
 	end
 	def isbn=(newisbn)
 		@isbn=newisbn
